@@ -27,7 +27,7 @@ connection.connect((error) => {
 });
 
 app.get("/", function (req, res) {
-  res.send("Lystloc Career page Backend...");
+  res.send("Lystloc Career page Backend.");
 });
 
 // Get all jobs
