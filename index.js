@@ -11,10 +11,11 @@ app.use(cors({
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
   password: process.env.password,
-  database: 'lystloc_jobs'
+  database: 'lystloc_jobs',
+  port:3306
 });
 
 // Check the database connection
