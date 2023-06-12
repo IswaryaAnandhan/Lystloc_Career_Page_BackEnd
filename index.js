@@ -6,16 +6,15 @@ app.use(express.json());
 const cors = require("cors");
 
 app.use(cors({
-  origin:"https://lystloc-career-page.netlify.app"
+  origin:"http://localhost:3000"
 }))
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: '127.0.0.1',
+  host: 'localhost',
   user: 'root',
   password: process.env.password,
-  database: 'lystloc_jobs',
-  port:3306
+  database: 'lystloc_jobs'
 });
 
 // Check the database connection
@@ -28,7 +27,7 @@ connection.connect((error) => {
 });
 
 app.get("/", function (req, res) {
-  res.send("Lystloc Career page Backend.");
+  res.send("Lystloc Career page Backend...");
 });
 
 // Get all jobs
